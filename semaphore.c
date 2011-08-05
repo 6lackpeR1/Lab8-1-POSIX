@@ -1,7 +1,7 @@
 #include	<pthread.h>
 #include	<sched.h>
+#include    <malloc.h>
 #include	"semaphore.h"
-
 #define	DEBUG	
 
 semaphore *sem;
