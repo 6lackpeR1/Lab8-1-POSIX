@@ -1,5 +1,6 @@
 #include	<stdio.h>
 #include	<stdlib.h>		// srand() & rand()
+#include	<pthread.h>
 #include	"prodcon.h"
 #include	"semaphore.h"
 
@@ -48,5 +49,5 @@ printf("updated widgPtr->nextEmpty = %d\n", widgPtr->nextEmpty);
 // Terminating
 	printf("Producer: Terminating\n");
 
-	pthread_exit(1);
+	pthread_exit(0);
 }

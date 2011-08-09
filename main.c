@@ -1,6 +1,6 @@
 #include	<pthread.h>
 #include	<stdio.h>
-#include    <stdlib.h>
+#include   	 <stdlib.h>
 #include	"prodcon.h"
 #include	"semaphore.h"
 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 	int i;
 
 // Get command line argument
-	if(argc != 2) {
+	if(argc != 2||atoi(argv[1]) < 1) {
 		printf("Usage: prodcon <run_time_seconds>\n");
 		exit(0);
 	} else {
