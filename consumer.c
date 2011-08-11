@@ -36,7 +36,8 @@ void *consumer(void *vParam) {
 		itCount = widgPtr->buffer[widgPtr->nextFull];
 #ifdef DEBUG
 	// Write record to stdout
-		printf("Consumer: Consumed widget #%d in buffer #%d\n",
+		printf("[<<]%-3d Consumer: Consumed widget #%d in buffer #%d\n",
+				widgPtr->nextFull,
 				widgPtr->buffer[widgPtr->nextFull], widgPtr->nextFull);
 #endif
 

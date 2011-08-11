@@ -37,11 +37,12 @@ void *producer(void *vParam) {
 		widgPtr->buffer[widgPtr->nextEmpty] = itCount++;
 #ifdef DEBUG
 	// Write record to stdout
-			printf("Producer: Produce widget #%d in buffer #%d\n",
+			printf("[>>]%-3d Producer: Produce widget #%d in buffer #%d\n",
+				widgPtr->nextEmpty,
 				widgPtr->buffer[widgPtr->nextEmpty], widgPtr->nextEmpty);
 #endif
 		widgPtr->nextEmpty = (widgPtr->nextEmpty+1) % N;
-printf("updated widgPtr->nextEmpty = %d\n", widgPtr->nextEmpty);
+printf("[^^]%-3d updated widgPtr->nextEmpty = %d\n", widgPtr->nextEmpty, widgPtr->nextEmpty);
 		V(bufManip);
 		V(full);
 	}
