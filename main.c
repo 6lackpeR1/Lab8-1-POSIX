@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 	full = create_semaphore (0);
 	bufManip = create_semaphore(1);
 
-// Initialize buffer pool
+// Initialize buffer pool clear
 	widgets.nextEmpty = 0;
 	widgets.nextFull = 0;
 	for(i = 0; i < N; i++)
@@ -62,11 +62,6 @@ printf("Parent awake and terminating children\n");
 // Wait for producer & consumer to terminate
 	pthread_join(prod_thrd, NULL);
 	pthread_join(cons_thrd, NULL);
-
-// Release the semaphores
-	delete_semaphore(empty);
-	delete_semaphore(full);
-	delete_semaphore(bufManip);
 
 // Now we can quit
 	printf("Main thread: Terminated\n");

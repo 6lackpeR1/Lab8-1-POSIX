@@ -2,7 +2,6 @@
 void *P(int);
 void *V(int);
 int create_semaphore(int);
-int delete_semaphore(int);
 
 
 typedef struct semaphore_t {

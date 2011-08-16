@@ -54,12 +54,6 @@ int create_semaphore(int iVal) {
     return new_sem->id;
 }
 
-int delete_semaphore(int me) {
-#ifdef DEBUG
-    printf("delete_semaphore() not implemented\n");
-#endif
-}
-
 semaphore *lookup(int sid) {
     semaphore *next_sem;
 
